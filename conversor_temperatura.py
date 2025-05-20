@@ -62,21 +62,33 @@ def programa_principal():
         temperatura_inicial = 0
 
         if opcion == "1":
+            escala_inicial = "°C"
+            escala_final = "K"
             temperatura_inicial = solicitar_datos()
             resultado = convertir_celcius_kelvin(temperatura_inicial)
         elif opcion == "2":
+            escala_inicial = "°C"
+            escala_final = "°F"
             temperatura_inicial = solicitar_datos()
             resultado = convertir_celcius_farenheit(temperatura_inicial)
         elif opcion == "3":
+            escala_inicial = "K"
+            escala_final = "°C"
             temperatura_inicial = solicitar_datos()
             resultado = convertir_kelvin_celcius (temperatura_inicial)
         elif opcion == "4":
+            escala_inicial = "°K"
+            escala_final = "°F"
             temperatura_inicial = solicitar_datos()
             resultado = convertir_kelvin_farenheit (temperatura_inicial)
         elif opcion == "5":
+            escala_inicial = "°F"
+            escala_final = "°C"
             temperatura_inicial = solicitar_datos()
             resultado = convertir_farenheit_celcius (temperatura_inicial)
         elif opcion == "6":
+            escala_inicial = "°F"
+            escala_final = "K"
             temperatura_inicial = solicitar_datos()
             resultado = convertir_farenheit_kelvin (temperatura_inicial)
         elif opcion == "0":
@@ -86,7 +98,7 @@ def programa_principal():
             print("Opción Invalida")
             pass
         print()
-        print(f"{temperatura_inicial}° = {resultado}°")
+        print(f"{temperatura_inicial}{escala_inicial} = {resultado}{escala_final}")
         print()
 
 programa_principal()
